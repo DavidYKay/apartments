@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{{ apartment.name }}
+
+<ul>
+  <li>Size: {{ apartment.sqft_string }} </li>
+  <li>Bedrooms: {{ apartment.bedrooms }}</li>
+  <li>Bathrooms: {{ apartment.bathrooms }}</li>
+  
+  
+
+</ul>
+
+Monthly Financials
+<ul>
+  <li>Rent:       $ {{ apartment.rent }}</li>
+  <li>Broker Fee:       $ {{ apartment.broker_amount }}</li>
+  <li>Security Deposit: $ {{ apartment.security_amount }}</li>
+</ul>
+
+Yearly Financials
+<ul>
+  <li>Total yearly cost:       $ {{ apartment.rent }}</li>
+  <li>Amortized Monthly cost (w/ deposit):       $ {{ apartment.rent }}</li>
+  <li>Amortized Monthly cost (no deposit):       $ {{ apartment.rent }}</li>
+</ul>
+
+
+{% endblock %}

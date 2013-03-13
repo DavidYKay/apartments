@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+Hello world!
+
+<ul>
+  {% for apartment in apartment_list %}
+  <li>
+    {{ apartment }}
+  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}
